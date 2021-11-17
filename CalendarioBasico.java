@@ -1,33 +1,17 @@
-
-/**
- * Write a description of class CalendarioBasico here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class CalendarioBasico
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class CalendarioBasico {
+    // Crea dias
+    private int dia;
+    // Crea mes
+    private int mes;
+    // Crea año
+    private int año;
 
     /**
-     * Constructor for objects of class CalendarioBasico
+     * Constructor de fecha
      */
-    public CalendarioBasico()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public CalendarioBasico() {
+        dia = 1;
+        mes = 1;
+        año = 1;
     }
 }
