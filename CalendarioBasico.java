@@ -19,7 +19,28 @@ public class CalendarioBasico {
      * Devuelve la fecha actual
      */
     public String obtenerFecha(){
-        return (dia + "-" + mes + "-" + año);
+        String diaTam = dia + "";
+        String mesTam = mes + "";
+        String añoTam = año + "";
+        if (dia < 10){
+            diaTam = "0" + diaTam;
+        }
+        else{
+            diaTam = dia + "";
+        }
+        if (año < 10){
+            añoTam = "0" + añoTam;
+        }
+        else{
+            añoTam = año + "";
+        }
+        if (mes < 10){
+            mesTam = "0" + mesTam;
+        }
+        else{
+            mesTam = mes + "";
+        }
+        return (diaTam + "-" + mesTam + "-" + añoTam);
     }
     
     /**
@@ -37,17 +58,17 @@ public class CalendarioBasico {
     public void avanzarFecha(){
         if (dia <= 30){
             dia = dia + 1;
-        }
-        if (dia == 31){
-            dia = 1;
-            mes = mes +1;
-        }
-        if (mes == 13){
-            año = año +1;
-            mes = 1;
-        }
-        if (año == 100){
-            año = 1;
+            if (dia == 31){
+                dia = 1;
+                mes = mes +1;
+                if (mes == 13){
+                    año = año +1;
+                    mes = 1;
+                    if (año == 100){
+                        año = 1;
+                    }
+                }
+            }
         }
     }
 }
